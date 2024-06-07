@@ -100,7 +100,7 @@ public class CFItems {
                     .saturationMod(0.7F)
                     .build()))
             .register();
-    public static final ItemEntry<Item> CHOCOLATE_WAFFLE = REGISTRATE.item("chocolate_apple", Item::new)
+    public static final ItemEntry<Item> CHOCOLATE_WAFFLE = REGISTRATE.item("chocolate_waffle", Item::new)
             .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
                     .saturationMod(0.7F)
                     .build()))
