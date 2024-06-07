@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create_confectionery"
+    }
+  ],
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "fluid": "create_confectionery:black_chocolate",
+      "nbt": {},
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "item": "create_factory:dark_chocolate_roll"
+    }
+  ]
+}

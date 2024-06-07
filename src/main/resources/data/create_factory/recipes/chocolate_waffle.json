@@ -1,0 +1,17 @@
+{
+    "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create_factory:waffle"
+    },
+    {
+      "amount": 250,
+      "fluid": "create:chocolate"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_factory:chocolate_waffle"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "create_factory:cake_paste"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_factory:uncooked_waffle"
+    }
+  ]
+}
