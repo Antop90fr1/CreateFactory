@@ -55,6 +55,11 @@ public class CFItems {
                     .saturationMod(0.5F)
                     .build()))
             .register();
+    public static final ItemEntry<Item> SWEET_BERRIES_JAM_ROLL = REGISTRATE.item("sweet_berries_jam_roll", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(8)
+                    .saturationMod(0.9F)
+                    .build()))
+            .register();
 
 
 
@@ -123,6 +128,11 @@ public class CFItems {
     public static final ItemEntry<Item> CARAMEL_WAFFLE = REGISTRATE.item("caramel_waffle", Item::new)
             .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
                     .saturationMod(0.7F)
+                    .build()))
+            .register();
+    public static final ItemEntry<Item> SWEET_BERRIES_JAM_WAFFLE = REGISTRATE.item("sweet_berries_jam_waffle", Item::new)
+            .properties(p -> p.food(new FoodProperties.Builder().nutrition(11)
+                    .saturationMod(1F)
                     .build()))
             .register();
 

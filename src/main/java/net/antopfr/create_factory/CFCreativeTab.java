@@ -14,7 +14,7 @@ public class CFCreativeTab {
     public static final DeferredRegister<CreativeModeTab> TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateFactory.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> CC_TAB = TABS.register("createcoloredcasing_tab",
+    public static final RegistryObject<CreativeModeTab> CF_TAB = TABS.register("createfactory_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(CFItems.CHOCOLATE_WAFFLE.get()))
                     .title(Component.translatable("creativetab.createfactory_tab"))
                     .displayItems((pParameters, pOutput) -> {
@@ -27,6 +27,8 @@ public class CFCreativeTab {
                         pOutput.accept(CFItems.RUBY_CHOCOLATE_ROLL.get());
                         pOutput.accept(CFItems.WHITE_CHOCOLATE_ROLL.get());
                         pOutput.accept(CFItems.CARAMEL_ROLL.get());
+                        pOutput.accept(CFItems.SWEET_BERRIES_JAM_ROLL.get());
+                        pOutput.accept(CFItems.CARAMEL_WAFFLE.get());
                         pOutput.accept(CFItems.HONEY_BERRIES.get());
                         pOutput.accept(CFItems.CHOCOLATE_APPLE.get());
                         pOutput.accept(CFItems.DARK_CHOCOLATE_APPLE.get());
@@ -39,6 +41,7 @@ public class CFCreativeTab {
                         pOutput.accept(CFItems.RUBY_CHOCOLATE_WAFFLE.get());
                         pOutput.accept(CFItems.WHITE_CHOCOLATE_WAFFLE.get());
                         pOutput.accept(CFItems.CARAMEL_WAFFLE.get());
+                        pOutput.accept(CFItems.SWEET_BERRIES_JAM_WAFFLE.get());
                     })
                     .build());
 

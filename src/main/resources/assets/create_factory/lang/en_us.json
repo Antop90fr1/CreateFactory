@@ -7,6 +7,7 @@
   "item.create_factory.honey_roll": "Honey Roll",
   "item.create_factory.ruby_chocolate_roll": "Ruby Chocolate Roll",
   "item.create_factory.white_chocolate_roll": "White Chocolate Roll",
+  "item.create_factory.sweet_berries_jam_roll": "Sweet Berries Jam Roll",
 
   "item.create_factory.caramel_apple": "Caramel Apple",
   "item.create_factory.dark_chocolate_apple": "Dark Chocolate Apple",
@@ -19,10 +20,15 @@
   "item.create_factory.honey_waffle": "Honey Waffle",
   "item.create_factory.ruby_chocolate_waffle": "Ruby Chocolate Waffle",
   "item.create_factory.white_chocolate_waffle": "White Chocolate Waffle",
+  "item.create_factory.sweet_berries_jam_waffle": "Sweet Berries Jam Waffle",
+
   "item.create_factory.waffle": "Waffle",
   "item.create_factory.uncooked_waffle": "Uncooked Waffle",
   "item.create_factory.cake_paste": "Cake Paste",
 
+  "block.create_factory.sweet_berries_jam": "Sweet Berries Jam",
+  "fluid.create_factory.sweet_berries_jam": "Sweet Berries Jam",
+  "item.create_factory.sweet_berries_jam_bucket": "Sweet Berries Jam Bucket",
 
   "creativetab.createfactory_tab": "Create: Factory"
 }

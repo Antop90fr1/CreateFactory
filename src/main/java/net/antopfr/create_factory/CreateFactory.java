@@ -1,6 +1,7 @@
 package net.antopfr.create_factory;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import net.antopfr.create_factory.registry.CFFluids;
 import net.antopfr.create_factory.registry.CFItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,11 +26,12 @@ public class CreateFactory
 
         CreateFactory.REGISTRATE.registerEventListeners(modEventBus);
 
+        CFFluids.register();
         CFCreativeTab.register(modEventBus);
         CFItems.register();
     }
 
-    public static ResourceLocation asResource(String path) {
+    public static ResourceLocation asResource (String path) {
         return new ResourceLocation(MOD_ID, path);
     }
 
