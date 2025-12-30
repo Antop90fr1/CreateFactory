@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create_confectionery"
+    }
+  ],
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create_factory:waffle"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_confectionery:ruby_chocolate"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_factory:ruby_chocolate_waffle"
+    }
+  ]
+}

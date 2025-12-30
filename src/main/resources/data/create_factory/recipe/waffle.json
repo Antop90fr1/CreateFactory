@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "create_factory:uncooked_waffle"
+  },
+  "result": {
+    "id": "create_factory:waffle"
+  }
+}

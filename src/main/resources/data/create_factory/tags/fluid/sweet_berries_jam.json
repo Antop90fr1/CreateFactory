@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "create_factory:sweet_berries_jam_flowing",
+    "create_factory:sweet_berries_jam"
+  ]
+}

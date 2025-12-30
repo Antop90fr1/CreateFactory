@@ -1,0 +1,18 @@
+{
+    "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create:chocolate"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_factory:chocolate_roll"
+    }
+  ]
+}
