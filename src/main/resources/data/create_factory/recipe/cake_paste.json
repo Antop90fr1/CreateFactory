@@ -19,7 +19,8 @@
   ],
   "results": [
     {
-      "id": "create_factory:cake_paste"
+      "id": "create_factory:cake_paste",
+      "count": 2
     }
   ]
 }

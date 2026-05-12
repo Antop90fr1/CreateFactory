@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "create_factory:white_jar",
+    "create_factory:red_jar",
+    "create_factory:orange_jar",
+    "create_factory:yellow_jar",
+    "create_factory:lime_jar",
+    "create_factory:green_jar",
+    "create_factory:cyan_jar",
+    "create_factory:light_blue_jar",
+    "create_factory:blue_jar",
+    "create_factory:purple_jar",
+    "create_factory:magenta_jar",
+    "create_factory:pink_jar",
+    "create_factory:brown_jar",
+    "create_factory:gray_jar",
+    "create_factory:light_gray_jar",
+    "create_factory:black_jar"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    "GIG",
+    "GGG"
+  ],
+  "key": {
+    "G": {"item": "minecraft:glass"},
+    "D": {"item": "minecraft:white_dye"},
+    "I": {"item": "create:iron_sheet"}
+  },
+  "result": {
+    "id": "create_factory:white_jar",
+    "count": 1
+  }
+}

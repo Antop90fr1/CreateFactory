@@ -7,6 +7,30 @@
     {
       "type": "single",
       "resource": "create_factory:fluid/sweet_berries_jam_still"
+    },
+    {
+      "type": "single",
+      "resource": "create_factory:fluid/glow_berries_jam_flow"
+    },
+    {
+      "type": "single",
+      "resource": "create_factory:fluid/glow_berries_jam_still"
+    },
+    {
+      "type": "single",
+      "resource": "create_factory:fluid/spread_flow"
+    },
+    {
+      "type": "single",
+      "resource": "create_factory:fluid/spread_still"
+    },
+    {
+      "type": "single",
+      "resource": "create_factory:fluid/nectar_flow"
+    },
+    {
+      "type": "single",
+      "resource": "create_factory:fluid/nectar_still"
     }
   ]
 }

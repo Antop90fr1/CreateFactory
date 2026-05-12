@@ -1,0 +1,18 @@
+{
+    "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "create_factory:glow_berries_jam"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_factory:glow_berries_jam_roll"
+    }
+  ]
+}

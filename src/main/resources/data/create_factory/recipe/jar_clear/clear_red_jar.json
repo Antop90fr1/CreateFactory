@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "create_factory:red_jar"}
+  ],
+  "result": {
+    "id": "create_factory:red_jar",
+    "count": 1
+  }
+}

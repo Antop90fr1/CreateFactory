@@ -4,6 +4,7 @@ import com.simibubi.create.AllFluids;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.FluidEntry;
 import net.antopfr.create_factory.CreateFactory;
+import net.antopfr.create_factory.block.GlowJam;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.BlockAndTintGetter;
@@ -31,6 +32,59 @@ public class CFFluids {
                     .build()
                     .register();
 
+    public static final FluidEntry<BaseFlowingFluid.Flowing> GLOW_BERRIES_JAM =
+            REGISTRATE.fluid("glow_berries_jam",
+                            ResourceLocation.fromNamespaceAndPath("create_factory","fluid/glow_berries_jam_still"),
+                            ResourceLocation.fromNamespaceAndPath("create_factory","fluid/glow_berries_jam_flow"),
+                            NoColorFluidAttributes::new)
+                    .lang("Glow Berries Jam")
+                    .properties(b -> b.viscosity(2000)
+                            .density(1400))
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .slopeFindDistance(3)
+                            .explosionResistance(100f))
+                    .source(BaseFlowingFluid.Source::new)
+                    .block(GlowJam::new)
+                    .build()
+                    .bucket()
+                    .build()
+                    .register();
+
+    public static final FluidEntry<BaseFlowingFluid.Flowing> SPREAD =
+            REGISTRATE.fluid("spread",
+                            ResourceLocation.fromNamespaceAndPath("create_factory","fluid/spread_still"),
+                            ResourceLocation.fromNamespaceAndPath("create_factory","fluid/spread_flow"),
+                            NoColorFluidAttributes::new)
+                    .lang("Chocolate Walnut Spread")
+                    .properties(b -> b.viscosity(2000)
+                            .density(1400))
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .slopeFindDistance(4)
+                            .explosionResistance(100f))
+                    .source(BaseFlowingFluid.Source::new)
+                    .bucket()
+                    .build()
+                    .register();
+
+    public static final FluidEntry<BaseFlowingFluid.Flowing> NECTAR =
+            REGISTRATE.fluid("nectar",
+                            ResourceLocation.fromNamespaceAndPath("create_factory","fluid/nectar_still"),
+                            ResourceLocation.fromNamespaceAndPath("create_factory","fluid/nectar_flow"),
+                            NoColorFluidAttributes::new)
+                    .lang("Nectar")
+                    .properties(b -> b.viscosity(2000)
+                            .density(1400))
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .slopeFindDistance(4)
+                            .explosionResistance(100f))
+                    .source(BaseFlowingFluid.Source::new)
+                    .bucket()
+                    .build()
+                    .register();
+
     public static void register() {}
 
     private static class NoColorFluidAttributes extends AllFluids.TintedFluidType {
@@ -46,7 +100,7 @@ public class CFFluids {
         }
 
         @Override
-        public int getTintColor(FluidState state, BlockAndTintGetter world, BlockPos pos) { return 0x00ffffff; }
+        public int getTintColor(FluidState state, BlockAndTintGetter world, BlockPos pos) { return -1; }
 
     }
 }

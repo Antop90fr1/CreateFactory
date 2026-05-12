@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    "GIG",
+    "GGG"
+  ],
+  "key": {
+    "G": {"item": "minecraft:glass"},
+    "D": {"item": "minecraft:brown_dye"},
+    "I": {"item": "create:iron_sheet"}
+  },
+  "result": {
+    "id": "create_factory:brown_jar",
+    "count": 1
+  }
+}

@@ -1,18 +1,24 @@
 {
-  "item.create_factory.chocolate_roll": "Chocolate Roll",
   "item.create_factory.honey_glazed_berries": "Honey Glazed Berries",
-  "item.create_factory.chocolate_apple": "Chocolate Apple",
+  "item.create_factory.nectar_glazed_berries": "Nectar Glazed Berries",
+
+  "item.create_factory.chocolate_roll": "Chocolate Roll",
   "item.create_factory.caramel_roll": "Caramel Roll",
   "item.create_factory.dark_chocolate_roll": "Dark Chocolate Roll",
   "item.create_factory.honey_roll": "Honey Roll",
   "item.create_factory.ruby_chocolate_roll": "Ruby Chocolate Roll",
   "item.create_factory.white_chocolate_roll": "White Chocolate Roll",
   "item.create_factory.sweet_berries_jam_roll": "Sweet Berries Jam Roll",
+  "item.create_factory.glow_berries_jam_roll": "Glow Berries Jam Roll",
+  "item.create_factory.spread_roll": "Chocolate Walnut Spread Roll",
 
+  "item.create_factory.chocolate_apple": "Chocolate Apple",
   "item.create_factory.caramel_apple": "Caramel Apple",
   "item.create_factory.dark_chocolate_apple": "Dark Chocolate Apple",
   "item.create_factory.ruby_chocolate_apple": "Ruby Chocolate Apple",
   "item.create_factory.white_chocolate_apple": "White Chocolate Apple",
+  "item.create_factory.spread_apple": "Chocolate Walnut Spread Apple",
+  "item.create_factory.nectar_apple": "Nectar Apple",
 
   "item.create_factory.chocolate_waffle": "Chocolate Waffle",
   "item.create_factory.caramel_waffle": "Caramel Waffle",
@@ -21,6 +27,8 @@
   "item.create_factory.ruby_chocolate_waffle": "Ruby Chocolate Waffle",
   "item.create_factory.white_chocolate_waffle": "White Chocolate Waffle",
   "item.create_factory.sweet_berries_jam_waffle": "Sweet Berries Jam Waffle",
+  "item.create_factory.glow_berries_jam_waffle": "Glow Berries Jam Waffle",
+  "item.create_factory.spread_waffle": "Chocolate Walnut Spread Waffle",
 
   "item.create_factory.waffle": "Waffle",
   "item.create_factory.uncooked_waffle": "Uncooked Waffle",
@@ -29,6 +37,43 @@
   "block.create_factory.sweet_berries_jam": "Sweet Berries Jam",
   "fluid.create_factory.sweet_berries_jam": "Sweet Berries Jam",
   "item.create_factory.sweet_berries_jam_bucket": "Sweet Berries Jam Bucket",
+
+  "block.create_factory.glow_berries_jam": "Glow Berries Jam",
+  "fluid.create_factory.glow_berries_jam": "Glow Berries Jam",
+  "item.create_factory.glow_berries_jam_bucket": "Glow Berries Jam Bucket",
+
+  "block.create_factory.spread": "Chocolate Walnut Spread",
+  "fluid.create_factory.spread": "Chocolate Walnut Spread",
+  "item.create_factory.spread_bucket": "Chocolate Walnut Spread Bucket",
+
+  "block.create_factory.nectar": "Nectar",
+  "fluid.create_factory.nectar": "Nectar",
+  "item.create_factory.nectar_bucket": "Nectar Bucket",
+
+  "tooltip.create_factory.jar.hold": "Hold [",
+  "tooltip.create_factory.jar.contents": "] to see Contents",
+  "gui.goggles.fluid_container.empty": "Empty",
+
+  "gui.goggles.fluid_container": "Fluid Container Info:",
+
+
+  "block.create_factory.white_jar": "White Jar",
+  "block.create_factory.red_jar": "Red Jar",
+  "block.create_factory.orange_jar": "Orange Jar",
+  "block.create_factory.yellow_jar": "Yellow Jar",
+  "block.create_factory.lime_jar": "Lime Jar",
+  "block.create_factory.green_jar": "Green Jar",
+  "block.create_factory.light_blue_jar": "Light Blue Jar",
+  "block.create_factory.blue_jar": "Blue Jar",
+  "block.create_factory.cyan_jar": "Cyan Jar",
+  "block.create_factory.purple_jar": "Purple Jar",
+  "block.create_factory.magenta_jar": "Magenta Jar",
+  "block.create_factory.pink_jar": "Pink Jar",
+  "block.create_factory.black_jar": "Black Jar",
+  "block.create_factory.light_gray_jar": "Light Gray Jar",
+  "block.create_factory.gray_jar": "Gray Jar",
+  "block.create_factory.brown_jar": "Brown Jar",
+
 
   "creativetab.createfactory_tab": "Create: Factory"
 }
