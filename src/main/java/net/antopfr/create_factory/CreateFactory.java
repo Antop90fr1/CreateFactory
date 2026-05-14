@@ -6,6 +6,8 @@ import net.antopfr.create_factory.registry.CFBlocks;
 import net.antopfr.create_factory.registry.CFBlockEntities;
 import net.antopfr.create_factory.registry.CFFluids;
 import net.antopfr.create_factory.registry.CFItems;
+import net.antopfr.create_factory.registry.compat.ConfectioneryItems;
+import net.antopfr.create_factory.registry.compat.EcologicsItems;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
@@ -17,6 +19,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.capabilities.Capabilities;
@@ -64,9 +67,14 @@ public class CreateFactory {
         modEventBus.addListener(CreateFactory::registerCapabilities);
 
         CFItems.register();
+        if (ModList.get().isLoaded("create_confectionery")) {ConfectioneryItems.register();}
+        if (ModList.get().isLoaded("ecologics")) {EcologicsItems.register();}
+
         CFFluids.register();
+
         CFBlockEntities.register();
         CFBlocks.register();
+
         CREATIVE_MODE_TABS.register(modEventBus);
     }
 

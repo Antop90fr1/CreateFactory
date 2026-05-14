@@ -9,6 +9,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.neoforged.fml.ModList;
 
 public class CFItems {
 
@@ -40,30 +41,6 @@ public class CFItems {
                     .saturationModifier(0.8F)
                     .build()))
             .register();
-    public static final ItemEntry<EffectFoodItem> DARK_CHOCOLATE_ROLL = REGISTRATE.item("dark_chocolate_roll", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(7)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(CreateConfectioneryModMobEffects.STIMULATION, 120, 0, true, false),1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> RUBY_CHOCOLATE_ROLL = REGISTRATE.item("ruby_chocolate_roll", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(7)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 40, 0, true, false), 1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> WHITE_CHOCOLATE_ROLL = REGISTRATE.item("white_chocolate_roll", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(7)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(CreateConfectioneryModMobEffects.REST, 600, 0, true, false), 1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> CARAMEL_ROLL = REGISTRATE.item("caramel_roll", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(7)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, true, false), 1)
-                    .build()))
-            .register();
     public static final ItemEntry<EffectFoodItem> SWEET_BERRIES_JAM_ROLL = REGISTRATE.item("sweet_berries_jam_roll", EffectFoodItem::new)
             .properties(p -> p.food(new FoodProperties.Builder().nutrition(8)
                     .saturationModifier(0.9F)
@@ -74,12 +51,6 @@ public class CFItems {
             .properties(p -> p.food(new FoodProperties.Builder().nutrition(8)
                     .saturationModifier(0.9F)
                     .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 200, 0, true, false),1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> SPREAD_ROLL = REGISTRATE.item("spread_roll", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(8)
-                    .saturationModifier(0.9F)
-                    .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 150, 0, true, false),1)
                     .build()))
             .register();
 
@@ -105,36 +76,6 @@ public class CFItems {
                     .saturationModifier(0.8F)
                     .build()))
             .register();
-    public static final ItemEntry<EffectFoodItem> DARK_CHOCOLATE_APPLE = REGISTRATE.item("dark_chocolate_apple", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(CreateConfectioneryModMobEffects.STIMULATION, 120, 0, true, false),1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> RUBY_CHOCOLATE_APPLE = REGISTRATE.item("ruby_chocolate_apple", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 40, 0, true, false), 1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> WHITE_CHOCOLATE_APPLE = REGISTRATE.item("white_chocolate_apple", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(CreateConfectioneryModMobEffects.REST, 600, 0, true, false), 1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> CARAMEL_APPLE = REGISTRATE.item("caramel_apple", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, true, false), 1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> SPREAD_APPLE = REGISTRATE.item("spread_apple", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(10)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 150, 0, true, false),1)
-                    .build()))
-            .register();
     public static final ItemEntry<EffectFoodItem> NECTAR_APPLE = REGISTRATE.item("nectar_apple", EffectFoodItem::new)
             .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
                     .saturationModifier(0.9F)
@@ -155,30 +96,6 @@ public class CFItems {
                     .saturationModifier(0.8F)
                     .build()))
             .register();
-    public static final ItemEntry<EffectFoodItem> DARK_CHOCOLATE_WAFFLE = REGISTRATE.item("dark_chocolate_waffle", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(CreateConfectioneryModMobEffects.STIMULATION, 120, 0, true, false),1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> RUBY_CHOCOLATE_WAFFLE = REGISTRATE.item("ruby_chocolate_waffle", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 40, 0, true, false), 1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> WHITE_CHOCOLATE_WAFFLE = REGISTRATE.item("white_chocolate_waffle", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(CreateConfectioneryModMobEffects.REST, 600, 0, true, false), 1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> CARAMEL_WAFFLE = REGISTRATE.item("caramel_waffle", EffectFoodItem::new)
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
-                    .saturationModifier(0.8F)
-                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, true, false), 1)
-                    .build()))
-            .register();
     public static final ItemEntry<EffectFoodItem> SWEET_BERRIES_JAM_WAFFLE = REGISTRATE.item("sweet_berries_jam_waffle", EffectFoodItem::new)
             .properties(p -> p.food(new FoodProperties.Builder().nutrition(11)
                     .saturationModifier(0.9F)
@@ -189,12 +106,6 @@ public class CFItems {
             .properties(p -> p.food(new FoodProperties.Builder().nutrition(11)
                     .saturationModifier(0.9F)
                     .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 300, 0, true, false),1)
-                    .build()))
-            .register();
-    public static final ItemEntry<EffectFoodItem> SPREAD_WAFFLE = REGISTRATE.item("spread_waffle", EffectFoodItem::new )
-            .properties(p -> p.food(new FoodProperties.Builder().nutrition(11)
-                    .saturationModifier(0.9F)
-                    .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 150, 0, true, false),1)
                     .build()))
             .register();
 

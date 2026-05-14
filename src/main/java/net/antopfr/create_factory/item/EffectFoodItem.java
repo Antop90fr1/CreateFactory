@@ -29,6 +29,8 @@ public class EffectFoodItem extends Item {
 
             MobEffectInstance effect = possibleEffect.effect();
 
+//            if (effect == null) continue;
+
             MutableComponent name = Component.translatable(effect.getDescriptionId());
 
             if (effect.getAmplifier() > 0) {
