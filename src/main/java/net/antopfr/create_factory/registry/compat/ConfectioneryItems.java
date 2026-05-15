@@ -42,7 +42,6 @@ public class ConfectioneryItems {
             .register();
 
 
-
     public static final ItemEntry<EffectFoodItem> DARK_CHOCOLATE_APPLE = REGISTRATE.item("dark_chocolate_apple", EffectFoodItem::new)
             .properties(p -> p.food(new FoodProperties.Builder().nutrition(9)
                     .saturationModifier(0.8F)
@@ -68,7 +67,6 @@ public class ConfectioneryItems {
                     .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, true, false), 1)
                     .build()))
             .register();
-
 
 
     public static final ItemEntry<EffectFoodItem> DARK_CHOCOLATE_WAFFLE = REGISTRATE.item("dark_chocolate_waffle", EffectFoodItem::new)

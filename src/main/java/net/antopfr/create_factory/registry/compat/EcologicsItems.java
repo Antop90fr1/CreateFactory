@@ -23,14 +23,12 @@ public class EcologicsItems {
             .register();
 
 
-
     public static final ItemEntry<EffectFoodItem> SPREAD_APPLE = REGISTRATE.item("spread_apple", EffectFoodItem::new)
             .properties(p -> p.food(new FoodProperties.Builder().nutrition(10)
                     .saturationModifier(0.8F)
                     .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 150, 0, true, false),1)
                     .build()))
             .register();
-
 
 
     public static final ItemEntry<EffectFoodItem> SPREAD_WAFFLE = REGISTRATE.item("spread_waffle", EffectFoodItem::new )

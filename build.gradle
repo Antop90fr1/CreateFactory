@@ -26,6 +26,10 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        name = "JEI"
+        url = "https://maven.blamejared.com"
+    }
 }
 
 base {
@@ -125,6 +129,8 @@ dependencies {
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
     implementation "curse.maven:create-confectionery-531834:8063074"
+    compileOnly "mezz.jei:jei-1.21.1-neoforge-api:19.21.0.247"
+    runtimeOnly "mezz.jei:jei-1.21.1-neoforge:19.21.0.247"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
