@@ -1,7 +1,6 @@
 package net.antopfr.create_factory.jei;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.datafixers.TypeRewriteRule;
 import com.mojang.math.Axis;
 import com.simibubi.create.AllFluids;
 import com.simibubi.create.compat.jei.category.animations.AnimatedKinetics;
@@ -19,18 +18,14 @@ import net.antopfr.create_factory.CreateFactory;
 import net.antopfr.create_factory.jar.JarBlockEntity;
 import net.antopfr.create_factory.registry.CFBlockEntities;
 import net.antopfr.create_factory.registry.CFBlocks;
-import net.antopfr.create_factory.registry.CFFluids;
 import net.createmod.catnip.gui.element.GuiGameElement;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.fluids.FluidStack;

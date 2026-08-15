@@ -4,12 +4,10 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.antopfr.create_factory.CreateFactory;
 import net.antopfr.create_factory.item.EffectFoodItem;
-import net.mcreator.createconfectionery.init.CreateConfectioneryModMobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
-import net.neoforged.fml.ModList;
 
 public class CFItems {
 

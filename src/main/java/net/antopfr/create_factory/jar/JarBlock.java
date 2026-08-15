@@ -3,8 +3,12 @@ package net.antopfr.create_factory.jar;
 import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
+import com.simibubi.create.content.fluids.potion.PotionFluidHandler;
 import com.simibubi.create.content.fluids.spout.FillingBySpout;
+import com.simibubi.create.content.fluids.transfer.GenericItemEmptying;
+import com.simibubi.create.foundation.fluid.FluidHelper;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.createmod.catnip.data.Pair;
 import net.antopfr.create_factory.registry.CFBlocks;
 import net.antopfr.create_factory.registry.CFBlockEntities;
 import net.antopfr.create_factory.registry.CFFluids;
@@ -109,7 +113,7 @@ public class JarBlock extends BaseEntityBlock implements IWrenchable {
                     if (!drained.isEmpty()) {
                         int filled = handTank.fill(drained, IFluidHandler.FluidAction.SIMULATE);
                         if (filled > 0) {
-                            FluidStack actual = new FluidStack(drained.getFluid(), filled);
+                            FluidStack actual = FluidHelper.copyStackWithAmount(drained, filled);
                             jar.getTank().drain(actual, IFluidHandler.FluidAction.EXECUTE);
                             handTank.fill(actual, IFluidHandler.FluidAction.EXECUTE);
 
@@ -129,7 +133,7 @@ public class JarBlock extends BaseEntityBlock implements IWrenchable {
                     if (!available.isEmpty()) {
                         int filled = jar.getTank().fill(available, IFluidHandler.FluidAction.SIMULATE);
                         if (filled > 0) {
-                            FluidStack actual = new FluidStack(available.getFluid(), filled);
+                            FluidStack actual = FluidHelper.copyStackWithAmount(available, filled);
                             handTank.drain(actual, IFluidHandler.FluidAction.EXECUTE);
                             jar.getTank().fill(actual, IFluidHandler.FluidAction.EXECUTE);
 
@@ -144,34 +148,66 @@ public class JarBlock extends BaseEntityBlock implements IWrenchable {
                         }
                     }
                 }
-            } else if (FillingBySpout.canItemBeFilled(level, stack)) {
-                FluidStack fluidInJar = jar.getTank().getFluid();
-                int requiredAmount = FillingBySpout.getRequiredAmountForItem(level, stack, fluidInJar);
-
-                if (requiredAmount != -1 && fluidInJar.getAmount() >= requiredAmount) {
-                    ItemStack result = FillingBySpout.fillItem(level, requiredAmount, stack, fluidInJar);
-                    jar.setChanged();
-                    level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
-
-                    if (!result.isEmpty()) {
-
-                        if (stack.isEmpty()) {
-                            player.setItemInHand(hand, result);
-                        } else {
-                            if (!player.getInventory().add(result)) {
-                                popResource(level, pos, result);
-                            }
-                        }
-
-                        level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1f, 1f);
-                    }
-                }
-            } else {
+            } else if (!tryFillHeldItem(level, pos, state, jar, player, hand, stack)
+                    && !tryEmptyHeldItem(level, pos, state, jar, player, stack)) {
                 FluidUtil.interactWithFluidHandler(player, hand, jar.getTank());
             }
         }
 
         return ItemInteractionResult.sidedSuccess(level.isClientSide());
+    }
+
+    private static boolean tryFillHeldItem(Level level, BlockPos pos, BlockState state, JarBlockEntity jar,
+                                           Player player, InteractionHand hand, ItemStack stack) {
+        if (!FillingBySpout.canItemBeFilled(level, stack))
+            return false;
+
+        FluidStack fluidInJar = jar.getTank().getFluid();
+        int requiredAmount = FillingBySpout.getRequiredAmountForItem(level, stack, fluidInJar);
+        if (requiredAmount == -1 || fluidInJar.getAmount() < requiredAmount)
+            return false;
+
+        ItemStack result = FillingBySpout.fillItem(level, requiredAmount, stack, fluidInJar);
+        jar.setChanged();
+        level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+        if (!result.isEmpty()) {
+            if (stack.isEmpty()) {
+                player.setItemInHand(hand, result);
+            } else if (!player.getInventory().add(result)) {
+                popResource(level, pos, result);
+            }
+            level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1f, 1f);
+        }
+        return true;
+    }
+
+    private static boolean tryEmptyHeldItem(Level level, BlockPos pos, BlockState state, JarBlockEntity jar,
+                                            Player player, ItemStack stack) {
+        if (!GenericItemEmptying.canItemBeEmptied(level, stack))
+            return false;
+
+        ItemStack single = stack.copyWithCount(1);
+        FluidStack toInsert = GenericItemEmptying.emptyItem(level, single, true).getFirst();
+        if (toInsert.isEmpty())
+            return false;
+
+        if (jar.getTank().fill(toInsert, IFluidHandler.FluidAction.SIMULATE) != toInsert.getAmount())
+            return false;
+
+        Pair<FluidStack, ItemStack> emptied = GenericItemEmptying.emptyItem(level, single, false);
+        jar.getTank().fill(emptied.getFirst(), IFluidHandler.FluidAction.EXECUTE);
+        level.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+
+        if (!player.getAbilities().instabuild) {
+            stack.shrink(1);
+            ItemStack remainder = emptied.getSecond();
+            if (!remainder.isEmpty() && !player.getInventory().add(remainder))
+                popResource(level, pos, remainder);
+        }
+
+        level.playSound(null, pos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1f, 1f);
+        return true;
     }
 
     @Override

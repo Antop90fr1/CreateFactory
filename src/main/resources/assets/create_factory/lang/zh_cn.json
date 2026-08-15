@@ -1,0 +1,79 @@
+{
+  "item.create_factory.honey_glazed_berries": "蜜渍浆果",
+  "item.create_factory.nectar_glazed_berries": "糖露渍浆果",
+
+  "item.create_factory.chocolate_roll": "巧克力卷",
+  "item.create_factory.caramel_roll": "焦糖卷",
+  "item.create_factory.dark_chocolate_roll": "黑巧克力卷",
+  "item.create_factory.honey_roll": "蜂蜜卷",
+  "item.create_factory.ruby_chocolate_roll": "红宝石巧克力卷",
+  "item.create_factory.white_chocolate_roll": "白巧克力卷",
+  "item.create_factory.sweet_berries_jam_roll": "甜浆果酱卷",
+  "item.create_factory.glow_berries_jam_roll": "发光浆果酱卷",
+  "item.create_factory.spread_roll": "核桃巧克力酱卷",
+
+  "item.create_factory.chocolate_apple": "巧克力苹果",
+  "item.create_factory.caramel_apple": "焦糖苹果",
+  "item.create_factory.dark_chocolate_apple": "黑巧克力苹果",
+  "item.create_factory.ruby_chocolate_apple": "红宝石巧克力苹果",
+  "item.create_factory.white_chocolate_apple": "白巧克力苹果",
+  "item.create_factory.spread_apple": "核桃巧克力酱苹果",
+  "item.create_factory.nectar_apple": "糖露苹果",
+
+  "item.create_factory.chocolate_waffle": "巧克力华夫饼",
+  "item.create_factory.caramel_waffle": "焦糖华夫饼",
+  "item.create_factory.dark_chocolate_waffle": "黑巧克力华夫饼",
+  "item.create_factory.honey_waffle": "蜂蜜华夫饼",
+  "item.create_factory.ruby_chocolate_waffle": "红宝石巧克力华夫饼",
+  "item.create_factory.white_chocolate_waffle": "白巧克力华夫饼",
+  "item.create_factory.sweet_berries_jam_waffle": "甜浆果酱华夫饼",
+  "item.create_factory.glow_berries_jam_waffle": "发光浆果酱华夫饼",
+  "item.create_factory.spread_waffle": "核桃巧克力酱华夫饼",
+
+  "item.create_factory.waffle": "华夫饼",
+  "item.create_factory.uncooked_waffle": "未烤制的华夫饼",
+  "item.create_factory.cake_paste": "蛋糕生坯",
+
+  "block.create_factory.sweet_berries_jam": "甜浆果酱",
+  "fluid.create_factory.sweet_berries_jam": "甜浆果酱",
+  "item.create_factory.sweet_berries_jam_bucket": "甜浆果酱桶",
+
+  "block.create_factory.glow_berries_jam": "发光浆果酱",
+  "fluid.create_factory.glow_berries_jam": "发光浆果酱",
+  "item.create_factory.glow_berries_jam_bucket": "发光浆果酱桶",
+
+  "block.create_factory.spread": "核桃巧克力酱",
+  "fluid.create_factory.spread": "核桃巧克力酱",
+  "item.create_factory.spread_bucket": "核桃巧克力酱桶",
+
+  "block.create_factory.nectar": "糖露",
+  "fluid.create_factory.nectar": "糖露",
+  "item.create_factory.nectar_bucket": "糖露桶",
+
+  "tooltip.create_factory.jar.hold": "按住 [",
+  "tooltip.create_factory.jar.contents": "] 查看内容",
+  "gui.goggles.fluid_container.empty": "空",
+
+  "gui.goggles.fluid_container": "液体容器信息：",
+
+  "jei.create_factory.jar_dipping": "罐蘸",
+
+  "block.create_factory.white_jar": "白色罐子",
+  "block.create_factory.red_jar": "红色罐子",
+  "block.create_factory.orange_jar": "橙色罐子",
+  "block.create_factory.yellow_jar": "黄色罐子",
+  "block.create_factory.lime_jar": "黄绿色罐子",
+  "block.create_factory.green_jar": "绿色罐子",
+  "block.create_factory.light_blue_jar": "淡蓝色罐子",
+  "block.create_factory.blue_jar": "蓝色罐子",
+  "block.create_factory.cyan_jar": "青色罐子",
+  "block.create_factory.purple_jar": "紫色罐子",
+  "block.create_factory.magenta_jar": "品红色罐子",
+  "block.create_factory.pink_jar": "粉红色罐子",
+  "block.create_factory.black_jar": "黑色罐子",
+  "block.create_factory.light_gray_jar": "淡灰色罐子",
+  "block.create_factory.gray_jar": "灰色罐子",
+  "block.create_factory.brown_jar": "棕色罐子",
+
+  "creativetab.createfactory_tab": "机械动力：食品工坊"
+}

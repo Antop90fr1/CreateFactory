@@ -26,22 +26,16 @@ public class EffectFoodItem extends Item {
         if (food == null) return;
 
         for (FoodProperties.PossibleEffect possibleEffect : food.effects()) {
-
             MobEffectInstance effect = possibleEffect.effect();
-
-//            if (effect == null) continue;
-
             MutableComponent name = Component.translatable(effect.getDescriptionId());
 
             if (effect.getAmplifier() > 0) {
                 name = Component.translatable("potion.withAmplifier", name, Component.translatable("potion.potency." + effect.getAmplifier())
                 );
             }
-
             if (effect.getDuration() > 20) {
                 name = Component.translatable("potion.withDuration", name, MobEffectUtil.formatDuration(effect, 1.0F, context.tickRate()));
             }
-
             tooltip.add(
                     name.withStyle(effect.getEffect().value().getCategory().getTooltipFormatting())
             );

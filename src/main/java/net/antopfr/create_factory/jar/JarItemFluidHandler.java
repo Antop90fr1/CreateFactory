@@ -1,5 +1,6 @@
 package net.antopfr.create_factory.jar;
 
+import com.simibubi.create.foundation.fluid.FluidHelper;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -9,7 +10,6 @@ import net.minecraft.world.item.component.CustomData;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
 import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
-
 
 public class JarItemFluidHandler implements IFluidHandlerItem {
 
@@ -62,7 +62,7 @@ public class JarItemFluidHandler implements IFluidHandlerItem {
 
     @Override
     public FluidStack drain(FluidStack resource, FluidAction action) {
-        FluidStack limited = new FluidStack(resource.getFluid(), Math.min(resource.getAmount(), 1000));
+        FluidStack limited = FluidHelper.copyStackWithAmount(resource, Math.min(resource.getAmount(), 1000));
         FluidStack drained = tank.drain(limited, action);
         if (action.execute()) save();
         return drained;
